@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.clock {
+    transform-style: preserve-3d;
+    perspective: 200px;  
+    /* backface-visibility: hidden; */
+    animation: 1s infinite clock-anim;
+}
+
+.Imain {
+    animation: 1s infinite Imain-anim;
+}
+
+@keyframes Imain-anim {
+    0%, 19%, 80%, 100% {
+        
+    }
+    20% {
+        z-index: 60;
+    }
+}
+
+@keyframes clock-anim {
+    0% { 
+        transform: rotateX(1deg);
+        background-color: rgb(31 41 55);
+        z-index: 30;
+    }
+
+    30% {
+        
+    }
+
+    30% {
+        background-color: rgb(75 85 99)
+    }
+    
+
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    60% { 
+        transform: rotateX(181deg);
+        opacity: 0;
+        z-index: 20; 
+    }
+    
+
+   }
